@@ -17,3 +17,12 @@ CONTAINER ID        IMAGE                     COMMAND                  CREATED  
 
 
 ```
+
+
+### 参考
+
+[`Deploying NGINX and NGINX Plus on Docker`](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-docker/)
+
+[`docker nginx image`](https://hub.docker.com/_/nginx/)
+
+[`how-to-run-nginx-in-a-docker-container`](https://www.digitalocean.com/community/tutorials/how-to-run-nginx-in-a-docker-container-on-ubuntu-14-04#prerequisites)

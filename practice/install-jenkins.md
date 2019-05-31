@@ -11,6 +11,8 @@ docker run --name jenkins  -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenk
 * -v      目录路径映射，jenkins_home映射到宿主主机的/var/jenkins/jenkins_home目录下
 
 
+执行：
+
 ```bash
 [root@server-test-212 jenkins]# docker run --name jenkins  -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins/jenkins_home jenkins/jenkins:lts
 Unable to find image 'jenkins/jenkins:lts' locally
@@ -22,6 +24,8 @@ c5e155d5a1d1: Pull complete
 1eadaf4c0dff: Pull complete 
 4c1388ac89fe: Pull complete
 ```
+
+执行结束：
 
 ```bash
 May 30, 2019 4:05:35 AM jenkins.install.SetupWizard init

@@ -1,7 +1,6 @@
 # 安装 gitlab
 
 ```bash
-
 [root@server-test-212 srv]# docker run --detach --hostname gitlab.on-bright.com --publish 8000:80  --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab --volume /srv/gitlab/logs:/var/log/gitlab --volume /srv/gitlab/data:/var/opt/gitlab --env GITLAB_OMNIBUS_CONFIG="external_url 'http://192.168.200.212';"  gitlab/gitlab-ce:latest
 
 ```
@@ -40,7 +39,7 @@ docker exec -it gitlab /bin/bash
 
 ```shell
 Usage:  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
-	    docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+	docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```
 
 ```bash

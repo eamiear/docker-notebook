@@ -1,5 +1,16 @@
 # docker 安装 Jenkins
 
+### 执行安装指令
+
+```bash
+docker run --name jenkins  -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins/jenkins_home jenkins/jenkins:lts
+```
+
+* --name: 容器名称
+* -p:     向外暴露端口号，8000:80 将镜像默认80端口，向外暴露为8000
+* -v      目录路径映射，jenkins_home映射到宿主主机的/var/jenkins/jenkins_home目录下
+
+
 ```bash
 [root@server-test-212 jenkins]# docker run --name jenkins  -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins/jenkins_home jenkins/jenkins:lts
 Unable to find image 'jenkins/jenkins:lts' locally

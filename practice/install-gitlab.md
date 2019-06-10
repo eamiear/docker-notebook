@@ -1,10 +1,13 @@
-# 安装 gitlab
+# 使用 docker 安装 gitlab
+
+### 配置执行
 
 ```bash
 [root@server-test-212 srv]# docker run --detach --hostname gitlab.on-bright.com --publish 8000:80  --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab --volume /srv/gitlab/logs:/var/log/gitlab --volume /srv/gitlab/data:/var/opt/gitlab --env GITLAB_OMNIBUS_CONFIG="external_url 'http://192.168.200.212';"  gitlab/gitlab-ce:latest
 
 ```
 
+执行结果
 ```
 ce:latest
 Unable to find image 'gitlab/gitlab-ce:latest' locally
@@ -23,17 +26,27 @@ Digest: sha256:51bf76a9018347ba525948902e82f30451b90a06d22e4c52ce5533b464e3864d
 
 ```
 
+### 登录修改密码
+
+在浏览中输入 `http://192.168.200.212:8000`，提示修改密码，修改密码后重新登录。
+
 默认账户 root
 
 ### 查看gitlab运行日志
 
+```bash
 docker logs gitlab
 
 docker logs -f gitlab
 
+```
+
 ### 进入容器
 
+```bash
 docker exec -it gitlab /bin/bash
+
+```
 
 ### 宿主机器与容器间的文件传递
 
